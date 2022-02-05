@@ -1,0 +1,18 @@
+# databases doesn't need to be tracked.
+databases/
+
+# project specific results don't need to be tracked.
+binom/
+ML/
+EM/
+ML_EM/
+
+debugging/
+
+# log files
+nohup.out
+
+# byte-compiled / obtimized / DLL files
+*.pyc
+lib/postgap/*pyc
+lib/postgap/__pycache__/
