@@ -957,7 +957,14 @@ def calc_logbinom(subset_size, k, m):
             Returntype: float
     '''
     p = float(1) / m
-    return subset_size*numpy.log(p) + (m - subset_size)*numpy.log(1-p)
+
+	if k == 1:
+		return subset_size*numpy.log(p) + (m - subset_size)*numpy.log(1-p)
+	else:
+		logsum = 1*numpy.log(p) + (m - 1)*numpy.log(1-p)
+		for i in range(2, k+1):
+		    logsum = sumlog(logsum, (i*numpy.log(p)+(m-1)*numpy.log(1-p)))
+		return (subset_size*numpy.log(p) + (m - subset_size)*numpy.log(1-p)) - logsum
 
 def merge_samples(samples):
     '''
