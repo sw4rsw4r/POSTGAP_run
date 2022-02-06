@@ -9,6 +9,11 @@ ML_EM/
 
 debugging/
 
+RUN_binom.sh
+RUN_EM.sh
+RUN_ML_EM.sh
+RUN_ML.sh
+
 # log files
 nohup.out
 
