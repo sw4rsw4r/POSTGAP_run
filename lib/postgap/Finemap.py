@@ -1086,7 +1086,7 @@ def set_prior(pi, annot, lambdas):
         Returntype: float, logistic prior probability at SNP
     '''
     annot = annot.transpose()
-    pi= 0.001 
+
     # original with intercept
     logitprior = numpy.log(pi) - numpy.log(1 - pi) # log(p / (1-p)) = logit for prior 
     logitprior = logitprior + sum(annot * lambdas)
@@ -1107,7 +1107,7 @@ def set_prior_prob(pi, annot, lambdas):
         Returntype: float, logistic prior probability at SNP
     '''
     annot = annot.transpose()
-    pi= 0.001  
+        
     # original with intercept
     logitprior = numpy.log(pi) - numpy.log(1 - pi) ### log(BF * Pr + 1 - Pr)
     logitprior = logitprior + sum(annot * lambdas)
